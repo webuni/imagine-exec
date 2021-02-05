@@ -1,0 +1,43 @@
+{
+    "name": "webuni/imagine-exec",
+    "type": "library",
+    "description": "Front matter parser and dumper for PHP",
+    "keywords": ["imagine","imagemagick","exec"],
+    "homepage": "https://github.com/webuni/imagine-exec",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Martin Hasoň",
+            "email": "martin.hason@gmail.com"
+        },
+        {
+            "name": "Webuni s.r.o.",
+            "homepage": "https://www.webuni.cz"
+        }
+    ],
+    "require": {
+        "php": "^7.2|^8.0",
+        "imagine/imagine": "^1.0",
+        "symfony/filesystem": "^3.0|^4.0|^5.0",
+        "symfony/process": "^3.0|^4.0|^5.0"
+    },
+    "require-dev": {
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Webuni\\ImagineExec\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Webuni\\ImagineExec\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}

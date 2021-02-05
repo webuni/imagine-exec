@@ -1,0 +1,23 @@
+version: '3.4'
+
+x-base: &x-base
+  volumes:
+  - .:$PWD
+  working_dir: $PWD
+  command: sshd
+
+x-alias: &x-alias
+  links:
+    - imagemagick
+  environment:
+    ALIAS_CONVERT: ssh imagemagick convert
+
+services:
+  php:
+    <<: *x-base
+    <<: *x-alias
+    image: "minidocks/php-tools:${PHP_VERSION:-8.0}"
+
+  imagemagick:
+    <<: *x-base
+    image: minidocks/imagemagick
